@@ -52,7 +52,7 @@ class Login extends JFrame implements ActionListener{
 			
 			try {
 		    Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root","venkat");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root","password");
 			Statement stmt=con.createStatement();
 			String sql="Select * from student where sname='"+userTextField.getText()+"' and password='"+passPasswordField.getText().toString()+"'";
 			ResultSet rs=stmt.executeQuery(sql); 
